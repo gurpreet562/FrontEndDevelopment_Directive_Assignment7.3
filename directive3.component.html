@@ -1,0 +1,19 @@
+
+<h1>LIST OF EMPLOYEES</h1>
+    <table >
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            </tr>
+        <tr *ngFor="let employee of employees;
+                     let index =index;
+             let isOdd=odd;
+             let isEven=even" 
+
+     [class.odd]="isOdd" 
+     [class.even]="isEven" 
+     [class.selected]="employee === selectedEmployee">                   >
+     <td myhighlight> {{ employee.name }}</td>
+     <td myhighlight>{{employee.age}}</td>
+     </tr>
+    </table>
